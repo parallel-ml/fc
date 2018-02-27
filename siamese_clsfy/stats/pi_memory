@@ -1,0 +1,420 @@
+##################################################
+#                                                #
+#             single image (spatial)             #
+#                                                #
+##################################################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    12    112.2 MiB      0.0 MiB   @title('single image (spatial)')
+    13                             @profile
+    14                             def main():
+    15                                 # load model
+    16    302.6 MiB    190.4 MiB       model = load_helper('image')
+
+
+
+
+
+##################################################
+#                                                #
+#            optical flow (temporal)             #
+#                                                #
+##################################################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    12    111.8 MiB      0.0 MiB   @title('optical flow (temporal)')
+    13                             @profile
+    14                             def main():
+    15                                 # load model
+    16    301.8 MiB    190.0 MiB       model = load_helper('optical flow')
+
+
+
+
+
+##################################################
+#                                                #
+#        fc layers (4096 nodes per layer)        #
+#                                                #
+##################################################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    12    112.3 MiB      0.0 MiB   @title('fc layers (4096 nodes per layer)')
+    13                             @profile
+    14                             def main():
+    15                                 # load model
+    16    114.7 MiB      2.4 MiB       model = load_helper('fc')
+
+
+
+
+
+##################################################
+#                                                #
+#               maxpooling layers                #
+#                                                #
+##################################################
+
+          ##############################
+          #      100 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    111.7 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.1 MiB      0.4 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      200 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.1 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.3 MiB      0.2 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      300 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.3 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.3 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      400 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.3 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.6 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      500 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.6 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.6 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      600 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.6 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    112.8 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      700 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    112.8 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.1 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      800 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.1 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.1 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #      900 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.1 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.3 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1000 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.3 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.6 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1100 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.6 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.6 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1200 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.6 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    113.9 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1300 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    113.9 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.0 MiB      0.2 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1400 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.0 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.0 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1500 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.0 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.3 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1600 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.3 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.5 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1700 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.5 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.5 MiB      0.0 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1800 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.5 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    114.8 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     1900 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    114.8 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    115.0 MiB      0.2 MiB                   return maxpool(N=N)
+
+
+
+
+
+          ##############################
+          #     2000 image frames      #
+          ##############################
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    29    115.0 MiB      0.0 MiB               @subtitle(str(N) +  ' image frames')
+    30                                         @profile
+    31                                         def loadmax(N):
+    32    115.2 MiB      0.3 MiB                   return maxpool(N=N)
+
+
+
+
+
+Filename: keras_quick_start.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    12    111.7 MiB      0.0 MiB   @title('maxpooling layers')
+    13                             @profile
+    14                             def main():
+    15                                 # load model
+    16    115.2 MiB      3.6 MiB       model = load_helper('maxpool')
+
+
+
+
+

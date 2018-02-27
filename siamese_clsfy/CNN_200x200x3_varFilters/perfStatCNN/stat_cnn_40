@@ -1,0 +1,134 @@
+Using TensorFlow backend.
+N = 40
+L = True
+repeats = 1
+##################################################
+#                                                #
+#                 fc layer first                 #
+#                                                #
+##################################################
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+load : 0.590 sec
+
+
+
+,
+ Performance counter stats for 'system wide':
+
+    12,244,443,210      cpu-cycles                                                    (15.63%)
+     6,124,372,329      bus-cycles                                                    (15.73%)
+     6,479,621,943      instructions              #    0.53  insn per cycle           (15.83%)
+       495,392,491      branches                                                      (15.93%)
+       118,869,098      branch-misses             #   23.99% of all branches          (16.03%)
+     3,035,231,611      cache-references                                              (16.13%)
+        89,097,471      cache-misses              #    2.935 % of all cache refs      (16.23%)
+        16,961,978      LLC-load-misses           #    5.56% of all LL-cache hits     (13.92%)
+       304,865,504      LLC-loads                                                     (13.92%)
+        17,006,248      LLC-store-misses                                              (13.92%)
+       302,999,713      LLC-stores                                                    (13.92%)
+            27,254      page-faults                                                 
+         3,848,576      dTLB-load-misses                                              (13.93%)
+         3,916,315      dTLB-store-misses                                             (13.92%)
+           923,571      iTLB-load-misses                                              (13.93%)
+     1,043,454,910      "armv7_cortex_a7/br_immed_retired/"                                     (13.92%)
+       118,594,555      "armv7_cortex_a7/br_mis_pred/"                                     (13.92%)
+     1,219,413,575      "armv7_cortex_a7/br_pred/"                                     (13.92%)
+                 0      "armv7_cortex_a7/br_return_retired/"                                     (13.92%)
+        62,407,569      "armv7_cortex_a7/bus_access/"                                     (13.92%)
+     6,097,755,171      "armv7_cortex_a7/bus_cycles/"                                     (13.92%)
+               381      "armv7_cortex_a7/cid_write_retired/"                                     (13.92%)
+    12,230,450,853      "armv7_cortex_a7/cpu_cycles/"                                     (13.92%)
+           216,298      "armv7_cortex_a7/exc_return/"                                     (13.92%)
+           167,893      "armv7_cortex_a7/exc_taken/"                                     (13.85%)
+     6,726,965,264      "armv7_cortex_a7/inst_retired/"                                     (13.75%)
+                 0      "armv7_cortex_a7/inst_spec/"                                     (13.65%)
+     3,196,158,474      "armv7_cortex_a7/l1d_cache/"                                     (13.55%)
+        89,469,264      "armv7_cortex_a7/l1d_cache_refill/"                                     (13.45%)
+        96,588,621      "armv7_cortex_a7/l1d_cache_wb/"                                     (13.35%)
+         3,337,532      "armv7_cortex_a7/l1d_tlb_refill/"                                     (13.32%)
+     4,084,968,593      "armv7_cortex_a7/l1i_cache/"                                     (13.32%)
+        99,322,772      "armv7_cortex_a7/l1i_cache_refill/"                                     (13.32%)
+           797,080      "armv7_cortex_a7/l1i_tlb_refill/"                                     (13.32%)
+       304,116,983      "armv7_cortex_a7/l2d_cache/"                                     (13.32%)
+        12,610,086      "armv7_cortex_a7/l2d_cache_refill/"                                     (13.32%)
+         3,948,122      "armv7_cortex_a7/l2d_cache_wb/"                                     (13.32%)
+     1,864,715,976      "armv7_cortex_a7/ld_retired/"                                     (13.32%)
+     3,110,484,138      "armv7_cortex_a7/mem_access/"                                     (13.32%)
+                 0      "armv7_cortex_a7/memory_error/"                                     (13.32%)
+       491,360,689      "armv7_cortex_a7/pc_write_retired/"                                     (13.32%)
+       744,906,115      "armv7_cortex_a7/st_retired/"                                     (13.32%)
+                 0      "armv7_cortex_a7/sw_incr/"                                     (13.32%)
+                 0      "armv7_cortex_a7/ttbr_write_retired/                                     (13.32%)
+         4,664,439      "armv7_cortex_a7/unaligned_ldst_retired/"                                     (13.32%)
+
+       9.912397663 seconds time elapsed
+
+Using TensorFlow backend.
+N = 40
+L = False
+repeats = 1
+##################################################
+#                                                #
+#                 fc layer first                 #
+#                                                #
+##################################################
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+load : 0.582 sec
+++++++++++++++++++++++++++++++++++++++++++++++++++
+inference : 0.301 sec
+
+
+
+,
+ Performance counter stats for 'system wide':
+
+   134,618,886,485      cpu-cycles                                                    (15.77%)
+    66,848,792,355      bus-cycles                                                    (15.80%)
+    84,780,431,005      instructions              #    0.63  insn per cycle           (15.82%)
+     7,132,363,591      branches                                                      (15.85%)
+       818,867,284      branch-misses             #   11.48% of all branches          (15.87%)
+    24,246,543,650      cache-references                                              (15.90%)
+       345,349,146      cache-misses              #    1.424 % of all cache refs      (15.92%)
+       300,298,700      LLC-load-misses           #   20.53% of all LL-cache hits     (13.66%)
+     1,462,671,774      LLC-loads                                                     (13.66%)
+       297,231,732      LLC-store-misses                                              (13.66%)
+     1,441,713,461      LLC-stores                                                    (13.66%)
+         2,112,845      page-faults                                                 
+        13,567,285      dTLB-load-misses                                              (13.66%)
+        13,551,088      dTLB-store-misses                                             (13.66%)
+         1,670,508      iTLB-load-misses                                              (13.66%)
+     9,016,929,397      "armv7_cortex_a7/br_immed_retired/"                                     (13.66%)
+       814,945,320      "armv7_cortex_a7/br_mis_pred/"                                     (13.66%)
+    11,466,681,735      "armv7_cortex_a7/br_pred/"                                     (13.66%)
+                 0      "armv7_cortex_a7/br_return_retired/"                                     (13.66%)
+     1,439,622,429      "armv7_cortex_a7/bus_access/"                                     (13.66%)
+    66,801,953,038      "armv7_cortex_a7/bus_cycles/"                                     (13.66%)
+               981      "armv7_cortex_a7/cid_write_retired/"                                     (13.66%)
+   135,777,194,317      "armv7_cortex_a7/cpu_cycles/"                                     (13.66%)
+         4,718,223      "armv7_cortex_a7/exc_return/"                                     (13.66%)
+         2,573,452      "armv7_cortex_a7/exc_taken/"                                     (13.66%)
+    83,918,269,736      "armv7_cortex_a7/inst_retired/"                                     (13.66%)
+                 0      "armv7_cortex_a7/inst_spec/"                                     (13.66%)
+    24,208,077,084      "armv7_cortex_a7/l1d_cache/"                                     (13.66%)
+       356,168,586      "armv7_cortex_a7/l1d_cache_refill/"                                     (13.66%)
+       542,602,099      "armv7_cortex_a7/l1d_cache_wb/"                                     (13.66%)
+        13,205,787      "armv7_cortex_a7/l1d_tlb_refill/"                                     (13.66%)
+    57,261,851,878      "armv7_cortex_a7/l1i_cache/"                                     (13.66%)
+       191,064,808      "armv7_cortex_a7/l1i_cache_refill/"                                     (13.66%)
+         1,699,135      "armv7_cortex_a7/l1i_tlb_refill/"                                     (13.66%)
+     1,464,541,039      "armv7_cortex_a7/l2d_cache/"                                     (13.66%)
+       284,617,658      "armv7_cortex_a7/l2d_cache_refill/"                                     (13.66%)
+       174,824,922      "armv7_cortex_a7/l2d_cache_wb/"                                     (13.66%)
+    14,239,938,655      "armv7_cortex_a7/ld_retired/"                                     (13.66%)
+    25,113,467,736      "armv7_cortex_a7/mem_access/"                                     (13.64%)
+                 0      "armv7_cortex_a7/memory_error/"                                     (13.61%)
+     6,762,119,341      "armv7_cortex_a7/pc_write_retired/"                                     (13.59%)
+     4,808,971,993      "armv7_cortex_a7/st_retired/"                                     (13.56%)
+                 0      "armv7_cortex_a7/sw_incr/"                                     (13.54%)
+                 0      "armv7_cortex_a7/ttbr_write_retired/                                     (13.51%)
+        31,785,771      "armv7_cortex_a7/unaligned_ldst_retired/"                                     (13.51%)
+
+      39.963348713 seconds time elapsed
+

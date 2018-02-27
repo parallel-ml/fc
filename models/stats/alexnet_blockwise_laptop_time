@@ -1,0 +1,9 @@
+conv1 single stream: 0.042 sec
+conv2 single stream: 0.015 sec
+conv3 single stream: 0.009 sec
+conv4 single stream: 0.008 sec
+conv5 single stream: 0.004 sec
+flatten: 0.001 sec
+fc1 single stream: 0.061 sec
+fc2 single stream: 0.021 sec
+fc3 single stream: 0.004 sec

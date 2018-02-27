@@ -1,0 +1,177 @@
+ing TensorFlow backend.
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:1095: UserWarning: psutil can not be used, posix used instead
+  new_backend, _backend))
+##################################################
+#                                                #
+#                    fc layer                    #
+#                                                #
+##################################################
+
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:163: UserWarning: psutil module not found. memory_profiler will be slow
+  warnings.warn("psutil module not found. memory_profiler will be slow")
+Filename: model_memory.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    30    208.6 MiB      0.0 MiB   @title('fc layer')
+    31                             @profile
+    32                             def run_fc():
+    33    208.6 MiB      0.0 MiB       def load():
+    34    208.6 MiB      0.0 MiB           model = Sequential()
+    35    209.6 MiB      1.0 MiB           model.add(Dense(4096, input_shape=(7680,)))
+    36    210.1 MiB      0.5 MiB           model.add(BatchNormalization(input_shape=(4096,)))
+    37    210.1 MiB      0.0 MiB           model.add(Activation('relu', input_shape=(4096,)))
+    38
+    39    210.2 MiB      0.1 MiB           model.add(Dense(4096, input_shape=(4096,)))
+    40    210.5 MiB      0.4 MiB           model.add(BatchNormalization(input_shape=(4096,)))
+    41    210.5 MiB      0.0 MiB           model.add(Activation('relu', input_shape=(4096,)))
+    42
+    43    210.6 MiB      0.1 MiB           model.add(Dense(51, input_shape=(4096,)))
+    44    211.0 MiB      0.4 MiB           model.add(BatchNormalization(input_shape=(51,)))
+    45    211.0 MiB      0.0 MiB           model.add(Activation('softmax', input_shape=(51,)))
+    46    211.0 MiB      0.0 MiB           return model
+    47
+    48    208.6 MiB     -2.4 MiB       def load_weights():
+    49                                     return load_model(
+    50                                         #'/home/jiashen/weights/clsfybatch_4/0000_epoch-4.0079_loss-0.0253_acc-4.1435_val_loss-0.0266_val_acc.hdf5'
+    51                                         '/MLdatasets/siamese_model/clsfybatch_300/hmdb/twostream_1/transforms_1/full_fc/split_1/4243_epoch-0.0000_loss-1.0000_acc-8.9889_val_loss-0.2479_val_acc.hdf5'
+    52                                         )
+    53
+    54    208.6 MiB      0.0 MiB       test_x = np.random.rand(7680)
+    55    211.0 MiB      2.4 MiB       model = load() if not WEIGHT else load_weights()
+    56
+    57    211.0 MiB      0.0 MiB       def predict():
+    58   1033.7 MiB    822.7 MiB           model.predict(np.array([test_x]))
+    59
+    60   1033.7 MiB      0.0 MiB       predict()
+
+
+
+
+
+Using TensorFlow backend.
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:1095: UserWarning: psutil can not be used, posix used instead
+  new_backend, _backend))
+##################################################
+#                                                #
+#                maxpooling layer                #
+#                                                #
+##################################################
+
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:163: UserWarning: psutil module not found. memory_profiler will be slow
+  warnings.warn("psutil module not found. memory_profiler will be slow")
+model_memory.py:79: UserWarning: Update your `Model` call to the Keras 2 API: `Model(outputs=Tensor("fl..., inputs=Tensor("in...)`
+  model = Model(input=input, outputs=flat)
+Filename: model_memory.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    63    208.8 MiB      0.0 MiB   @title('maxpooling layer')
+    64                             @profile
+    65                             def run_maxpool():
+    66    208.8 MiB      0.0 MiB       test_x = np.random.rand(100, 256)
+    67
+    68    208.8 MiB      0.0 MiB       def load():
+    69    208.8 MiB      0.0 MiB           N = 100
+    70    209.1 MiB      0.3 MiB           input = Input(shape=(N, 256), name='input')
+    71
+    72    209.2 MiB      0.1 MiB           max1 = MaxPooling1D(pool_size=N, strides=N)(input)
+    73    209.2 MiB      0.0 MiB           max2 = MaxPooling1D(pool_size=N / 2, strides=N / 2)(input)
+    74    209.3 MiB      0.0 MiB           max3 = MaxPooling1D(pool_size=N / 4, strides=N / 4)(input)
+    75    209.3 MiB      0.0 MiB           max4 = MaxPooling1D(pool_size=N / 8, strides=N / 8)(input)
+    76
+    77    209.4 MiB      0.1 MiB           mrg = Concatenate(axis=1)([max1, max2, max3, max4])
+    78    209.6 MiB      0.2 MiB           flat = Flatten()(mrg)
+    79    209.6 MiB      0.0 MiB           model = Model(input=input, outputs=flat)
+    80    209.6 MiB      0.0 MiB           return model
+    81
+    82    209.6 MiB      0.0 MiB       model = load()
+    83
+    84    209.6 MiB      0.0 MiB       def predict():
+    85    859.8 MiB    650.3 MiB           model.predict(np.array([test_x]))
+    86
+    87    859.8 MiB      0.0 MiB       predict()
+
+
+
+
+
+Using TensorFlow backend.
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:1095: UserWarning: psutil can not be used, posix used instead
+  new_backend, _backend))
+##################################################
+#                                                #
+#                    spatial                     #
+#                                                #
+##################################################
+
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:163: UserWarning: psutil module not found. memory_profiler will be slow
+  warnings.warn("psutil module not found. memory_profiler will be slow")
+Filename: model_memory.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+   114    208.9 MiB      0.0 MiB   @title('spatial')
+   115                             @profile
+   116                             def run_spatial():
+   117    208.9 MiB      0.0 MiB       def load():
+   118    211.9 MiB      3.0 MiB           return load_spatial()
+   119
+   120    208.9 MiB     -3.0 MiB       def load_weights():
+   121                                     return load_model(
+   122                                         #'/home/jiashen/weights/batch_4_aug/199_epoch-5.2804_loss-0.1080_acc-5.9187_val_loss-0.0662_val_acc.hdf5'
+   123                                         '/MLdatasets/siamese_model/batch_100_aug/imgnet/filter_256/28Oct-original/199_epoch-4.2777_loss-0.1949_acc-4.9191_val_loss-0.1437_val_acc.hdf5'
+   124                                         )
+   125
+   126    211.9 MiB      3.0 MiB       model = load() if not WEIGHT else load_weights()
+   127    211.9 MiB      0.0 MiB       test_x = np.random.rand(12, 16, 3)
+   128                                 # pop the last three layers used by training
+   129    211.9 MiB      0.0 MiB       for _ in range(3):
+   130    211.9 MiB      0.0 MiB           model.pop()
+   131
+   132    211.9 MiB      0.0 MiB       def predict():
+   133   1147.2 MiB    935.4 MiB           model.predict(np.array([test_x]))
+   134
+   135   1147.2 MiB      0.0 MiB       predict()
+
+
+
+
+
+Using TensorFlow backend.
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:1095: UserWarning: psutil can not be used, posix used instead
+  new_backend, _backend))
+##################################################
+#                                                #
+#                    temporal                    #
+#                                                #
+##################################################
+
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:163: UserWarning: psutil module not found. memory_profiler will be slow
+  warnings.warn("psutil module not found. memory_profiler will be slow")
+Filename: model_memory.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    90    208.8 MiB      0.0 MiB   @title('temporal')
+    91                             @profile
+    92                             def run_temporal():
+    93    208.8 MiB      0.0 MiB       def load():
+    94    211.6 MiB      2.8 MiB           return load_temporal()
+    95
+    96    208.8 MiB     -2.8 MiB       def load_weights():
+    97                                     return load_model(
+    98                                         #'/home/jiashen/weights/batch_4_noaug/199_epoch-0.2510_loss-0.9403_acc-6.5269_val_loss-0.3061_val_acc.hdf5'
+    99                                         '/MLdatasets/siamese_model/batch_4_noaug/hmdb/oflow/first_try/split_1/199_epoch-0.2510_loss-0.9403_acc-6.5269_val_loss-0.3061_val_acc.hdf5'
+   100                                         )
+   101
+   102    211.6 MiB      2.8 MiB       model = load() if not WEIGHT else load_weights()
+   103    211.6 MiB      0.0 MiB       test_x = np.random.rand(12, 16, 20)
+   104                                 # pop the last three layers used by training
+   105    211.6 MiB      0.0 MiB       for _ in range(3):
+   106    211.6 MiB      0.0 MiB           model.pop()
+   107
+   108    211.6 MiB      0.0 MiB       def predict():
+   109   1144.5 MiB    933.0 MiB           model.predict(np.array([test_x]))
+   110
+   111   1144.5 MiB      0.0 MiB       predict()
